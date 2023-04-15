@@ -1,0 +1,8 @@
+.product_imgs {
+    width: -webkit-fill-available;
+    height: 100%;
+}
+
+.hand-cursor {
+    cursor: pointer;
+}

@@ -1,15 +1,29 @@
 import React from "react";
 import NavBar from "./NavBar";
-import AllProducts from "./AllProducts";
+import Cart from "./Cart";
 import Home from "./Home";
+import Login from "./login";
+import AddNew from "./addnew";
+import ErrorPage from "./error";
+import AllProducts from "./AllProducts";
+
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+
 
 function App() {
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <NavBar />
-      <AllProducts />
-      {/* <Home /> */}
-    </React.Fragment>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/products" element={<AllProducts />} />
+        <Route exact path="/addnew" element={<AddNew />} />
+        <Route exact path="/cart" element={<Cart />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

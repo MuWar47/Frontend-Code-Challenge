@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import NavBar from "./NavBar";
 
 const Container = styled.div`
     height: 100vh;
@@ -15,12 +15,11 @@ const Banner = styled.div`
 function Home() {
     return (
         <Container>
-            <NavBar />
             <Banner>
                 <h2>RandoStore</h2>
 
-                <button type="button" className="btn btn-outline-primary">View All Products</button>
-                <button type="button" className="btn btn-outline-primary">View Cart</button>
+                <Link to="/products"><button type="button" className="btn btn-outline-primary">View All Products</button></Link>
+                <Link to="/cart"><button type="button" className="btn btn-outline-primary">View Cart</button></Link>
             </Banner>
 
         </Container>
